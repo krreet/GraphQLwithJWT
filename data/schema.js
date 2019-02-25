@@ -32,8 +32,11 @@ const SERVER = new ApolloServer({
     context:  ({req, res}) => ({
                   user: req.user
                 }),
+
+                //req.protocol + '://' + req.get('host') + req.originalUrl;
     playground: {
-      endpoint: `http://localhost:3000/graphql`,
+     // endpoint: `http://localhost:${process.env.PORT || 3000}/graphql`,
+      endpoint: `${req.protocol}://${req.get('host')}${req.originalUrl}`,
       settings: {
         'editor.theme': 'light'
       }
