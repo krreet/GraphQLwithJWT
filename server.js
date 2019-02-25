@@ -6,7 +6,6 @@ const app = express()
 
 const PORT =  process.env.PORT || 3000 ;
 const path = '/graphql';
-const play
 
 const jwt = require('express-jwt')
 require('dotenv').config()
