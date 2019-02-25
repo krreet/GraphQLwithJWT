@@ -4,7 +4,7 @@ const schema = require('./data/schema');
 const SERVER =  require('./data/schema.js');
 const app = express()
 
-const PORT = 3000
+const PORT =  process.env.PORT || 3000 ;
 const path = '/graphql';
 
 const jwt = require('express-jwt')
