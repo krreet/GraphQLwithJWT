@@ -19,8 +19,7 @@ const auth = jwt({
 // Middleware: GraphQL
 SERVER.applyMiddleware({
     app,
-    path,
-    playgroundPath: '/'
+    path
   });
 // create our express app
 
